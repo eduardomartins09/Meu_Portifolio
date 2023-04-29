@@ -19,6 +19,10 @@ body {
 header {
     background-color: #000;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -206,34 +210,8 @@ main .sobre {
     font-size: .9rem;
 }
 
-/* RESPONSIVO */
-
-@media(max-width: 992px) {
-    .section-div img {
-        display: none;
-    }
-
-    .section-div {
-        grid-template-columns: 1fr;
-    }
-
-    header {
-        justify-content: space-between;
-        padding: 30px 70px;
-    }
-
-    header .navegacao-primaria {
-        display: block;
-        margin-left: 1rem;
-    }
-}
-
-
-
-
 
 /* SEÇÃO SERVICES */
-
 .services {
     padding: 20px;
     background-color: #151515;
@@ -324,7 +302,6 @@ main .sobre {
 }
 
 /* PROJECTS */
-
 .projects {
     padding: 30px;
     display: grid;
@@ -367,7 +344,6 @@ main .sobre {
 }
 
 /* FOOTER */
-
 footer {
     background-color: #000000;
     padding: 1rem;
@@ -411,7 +387,27 @@ footer {
     background-color: #222;
 }
 
+
+/* RESPONSIVO */
 @media(max-width: 992px) {
+    .section-div img {
+        display: none;
+    }
+
+    .section-div {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 30px 70px;
+    }
+
+    header .navegacao-primaria {
+        display: block;
+        margin-left: 1rem;
+    }
+
     .sobre img {
         grid-column: 1/-1;
         justify-self: center;
