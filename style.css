@@ -409,7 +409,7 @@ footer {
 }
 
 .footer_sociais li img {
-    width: 80px;
+    width: 70px;
 }
 
 .footer_sociais::before {
@@ -419,6 +419,22 @@ footer {
     height: 5px;
     width: 200px;
     background-color: #222;
+}
+
+/* Button Back To The Top */
+.back-to-the-top {
+    display: grid;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+
+.back-to-the-top button {
+    background-color: #12ABCD;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* RESPONSIVO */
