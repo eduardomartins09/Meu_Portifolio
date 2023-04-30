@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
 * {
@@ -13,6 +13,10 @@ body {
     background-color: #000;
     max-width: 100vw;
     margin: 0 auto;
+}
+
+a {
+    color: #12ABCD;
 }
 
 /* HEADER */
@@ -45,8 +49,6 @@ header .navegacao-primaria {
 
 header .navegacao-primaria li a {
     color: #fff;
-    width: 0px;
-    height: 0px;
     font-size: 1.3rem;
 }
 
@@ -69,7 +71,6 @@ header .navegacao-primaria li a:hover::after {
 /* DOWLOAD CV SECAO */
 .section-div {
     animation: inicializar .7s forwards;
-    background-color: #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
@@ -79,22 +80,20 @@ header .navegacao-primaria li a:hover::after {
 }
 
 .section-div div {
-    margin-top: 80px;
-    align-self: start;
     display: grid;
+    align-self: start;
+    margin-top: 100px;
     gap: 25px;
+    font-family: 'Poppins';
+    color: #f7f7f7;
 }
 
 .section-div div h2 {
-    font-family: 'Poppins';
-    font-weight: 600;
-    color: #f7f7f7;
+    font-weight: 600;  
 }
 
 .section-div div p {
-    font-family: 'Poppins';
-    font-weight: 200;
-    color: #f7f7f7;
+    font-weight: 200; 
 }
 
 .section-div div a {
@@ -103,6 +102,12 @@ header .navegacao-primaria li a:hover::after {
     padding: 15px 40px;
     border-radius: 5px;
     border: 2px solid white;
+    font-weight: 600;
+}
+
+.section-div div a:hover {
+    background-color: #12ABCD;
+    color: #000;
 }
 
 .section-div img {
@@ -114,6 +119,7 @@ header .navegacao-primaria li a:hover::after {
         opacity: 0;
         transform: translate3d(0, -60px, 0);
     }
+
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
@@ -210,24 +216,23 @@ main .sobre {
     font-size: .9rem;
 }
 
-
 /* SEÇÃO SERVICES */
-.services {
+.skills {
     padding: 20px;
     background-color: #151515;
 }
 
-.my_services {
+.my_skills {
     padding: 20px;
     color: white;
 }
 
-.my_services img {
+.my_skills img {
     width: 60px;
     margin: 0 auto;
 }
 
-.my_services ul {
+.my_skills ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -235,7 +240,7 @@ main .sobre {
     justify-content: center;
 }
 
-.my_services ul li {
+.my_skills ul li {
     cursor: pointer;
     border-radius: 6px;
     position: relative;
@@ -249,19 +254,19 @@ main .sobre {
     background-color: #222;
 }
 
-.my_services ul li h3 {
+.my_skills ul li h3 {
     color: #fff;
     font-size: 1.6rem;
     font-family: 'poppins';
     font-weight: 500;
 }
 
-.my_services ul li p {
+.my_skills ul li p {
     color: #707070;
     font-size: 1em;
 }
 
-.my_services li::before {
+.my_skills li::before {
     content: '';
     transition: .5s ease-in-out;
     border-radius: 6px;
@@ -274,7 +279,7 @@ main .sobre {
     border-right: 2px solid transparent;
 }
 
-.my_services li::after {
+.my_skills li::after {
     content: '';
     transition: .5s ease-in-out;
     border-radius: 6px;
@@ -287,14 +292,14 @@ main .sobre {
     border-left: 2px solid transparent;
 }
 
-.my_services li:hover::before {
+.my_skills li:hover::before {
     width: 100%;
     height: 100%;
     border-top: 2px solid red;
     border-right: 2px solid red;
 }
 
-.my_services li:hover::after {
+.my_skills li:hover::after {
     width: 100%;
     height: 100%;
     border-bottom: 2px solid red;
@@ -303,16 +308,10 @@ main .sobre {
 
 /* PROJECTS */
 .projects {
-    padding: 30px;
     display: grid;
     justify-content: center;
+    padding: 30px;
     background-color: #111111;
-}
-
-.projects ul {
-    justify-content: center;
-    display: flex;
-    gap: 1rem;
 }
 
 .project_models ul li {
@@ -324,24 +323,65 @@ main .sobre {
     padding: 6px 20px;
 }
 
-.projects_armazenamento ul {
+.projects ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.project {
+    padding: 30px;
     display: grid;
-    margin-top: 60px;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
 }
 
-.projects_armazenamento ul li {
-    display: block;
-    object-fit: fill;
+.project .img-project {
+    max-width: 100%;
+    height: 100%;
+    border: 1px solid #000;
 }
 
-.projects_armazenamento ul li img {
-    cursor: pointer;
-    width: 500px;
-    border-radius: 4px;
+.project .img-project img {
+    max-width: 100%;
+    height: 100%;
 }
+
+.project .details-project {
+    text-align: justify;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project .details-project h2 {
+    color: #12ABCD;
+}
+
+.project .details-project .buttons a {
+    background-color: #12ABCD;
+    color: #000;
+    font-weight: 700;
+    padding: 0.5rem 3rem;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.project .details-project .buttons {
+    margin-top: 1rem;
+}
+
+.project .details-project .buttons a:not(:last-child) {
+    margin-right: 1.7rem;
+}
+
+.project .details-project .buttons a:hover {
+    background-color: #000;
+    color: white;
+}   
 
 /* FOOTER */
 footer {
@@ -372,12 +412,6 @@ footer {
     width: 80px;
 }
 
-.footer_sociais li:hover {
-    transition: .3s ease-in-out;
-    cursor: pointer;
-    background-color: #3e3d3d;
-}
-
 .footer_sociais::before {
     position: absolute;
     content: '';
@@ -387,17 +421,8 @@ footer {
     background-color: #222;
 }
 
-
 /* RESPONSIVO */
 @media(max-width: 992px) {
-    .section-div img {
-        display: none;
-    }
-
-    .section-div {
-        grid-template-columns: 1fr;
-    }
-
     header {
         justify-content: space-between;
         padding: 30px 70px;
@@ -406,6 +431,15 @@ footer {
     header .navegacao-primaria {
         display: block;
         margin-left: 1rem;
+    }
+
+    .section-div img {
+        display: none;
+    }
+
+    .section-div {
+        grid-template-columns: 1fr;
+        margin-top: 4rem;
     }
 
     .sobre img {
@@ -425,11 +459,16 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .projects_armazenamento ul {
+    .project {
         grid-template-columns: 1fr;
     }
 
-    .projects_armazenamento ul li img {
-        width: 300px;
+    .project .details-project .buttons {
+        margin-top: 1.5rem;
+    }
+
+    .project .details-project .buttons a {
+        padding: 0.5rem 1rem;
+        font-size: 1em;
     }
 }
