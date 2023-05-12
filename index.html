@@ -14,7 +14,14 @@
 
 <body>
     <header>
-        <h1>Dev <span>Front-End</span></h1>
+        <div class="text_menu">
+            <h1>Dev <span>Front-End</span></h1>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img class="icon" src="imgs/menu_white_36dp.svg" alt="icon-menu-mobile">
+                </button>
+            </div>
+        </div>
         <nav>
             <ul class="navegacao-primaria">
                 <li><a href="#home">Home</a></li>
@@ -23,6 +30,15 @@
                 <li><a href="#projects">Projetos</a></li>               
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            <div class="mobile-menu open">
+                <ul>
+                    <li class="nav-item-mobile"><a href="#home">Home</a></li>
+                    <li class="nav-item-mobile"><a href="#about-me">Sobre</a></li>
+                    <li class="nav-item-mobile"><a href="#skills">Skills</a></li>               
+                    <li class="nav-item-mobile"><a href="#projects">Projetos</a></li>               
+                    <li class="nav-item-mobile"><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <section class="section-div" id="home">
